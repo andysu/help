@@ -1,7 +1,7 @@
-1 Install nginx
-2 install certbot
-3 get cert for your site via nginx certbo plugin
-4 install influxdb
+1) Install nginx
+2) install certbot
+3) get cert for your site via nginx certbo plugin
+4) install influxdb
 
     apt install curl gnupg gnupg1 gnupg2 net-tools software-properties-common
 
@@ -27,7 +27,7 @@
     show databases
     show users
    
-5 install telegraf
+5) install telegraf
    
     sudo apt install telegraf -y
 
@@ -79,7 +79,7 @@
           #Telegraf provides telegraf command to manage the configuration, 
           #including generate the configuration itself, run the command as below.
           
-  6 install grafana
+6) install grafana
   
 
       wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
