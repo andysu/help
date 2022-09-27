@@ -50,24 +50,22 @@
   hostname = "Grafana"
   flush_interval = "10s"
   interval = "10s"
-
-
-          # Input Plugins
-          [[inputs.cpu]]
-              percpu = true
-              totalcpu = true
-              collect_cpu_time = false
-              report_active = false
-          [[inputs.disk]]
-              ignore_fs = ["tmpfs", "devtmpfs", "devfs"]
-          [[inputs.io]]
-          [[inputs.mem]]
-          [[inputs.net]]
-          [[inputs.system]]
-          [[inputs.swap]]
-          [[inputs.netstat]]
-          [[inputs.processes]]
-          [[inputs.kernel]]
+  # Input Plugins
+  [[inputs.cpu]]
+    percpu = true
+    totalcpu = true
+    collect_cpu_time = false
+    report_active = false
+   [[inputs.disk]]
+    ignore_fs = ["tmpfs", "devtmpfs", "devfs"]
+    [[inputs.io]]
+    [[inputs.mem]]
+    [[inputs.net]]
+    [[inputs.system]]
+    [[inputs.swap]]
+    [[inputs.netstat]]
+    [[inputs.processes]]
+    [[inputs.kernel]]
 
           # Output Plugin InfluxDB
           [[outputs.influxdb]]
@@ -107,4 +105,9 @@
         password = "myP@ssw0rd"
         Type = GET
         
-       
+7) install mosquitto
+    
+    sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+    sudo apt-get update
+    sudo apt install mosquitto -y
+
